@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
-
+const PORT= process.env.PORT ||3000
 //current date and time
 const dt = Date.now();
 const date_obj = new Date(dt);
@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
   res.json({ Files: { files } });
 });
 
-app.listen(3000);
+app.listen(PORT);
 
 
 
